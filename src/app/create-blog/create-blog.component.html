@@ -1,0 +1,59 @@
+<div class="row ">
+  <div class="col-lg-3 col-sm-3 py-5 pl-5">
+  </div>
+  <div class= "col-lg-9 col-sm-3 py-4 pr-4">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder">Blog Name:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50"  [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="email">About Blog:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50" id="email"  [(ngModel)]="about" [ngModelOptions]="{standalone: true}" >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="email">Category:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50" id="cat"  [(ngModel)]="category" [ngModelOptions]="{standalone: true}" >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="email">Access:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50" id="acc"  [(ngModel)]="access" [ngModelOptions]="{standalone: true}" >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="email">Image:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50" id="image"  [(ngModel)]="image" [ngModelOptions]="{standalone: true}" >
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="content">Content:</div>
+        <div class="col-sm-10">
+          <textarea cols="50" rows="5" [(ngModel)]="content" [ngModelOptions]="{standalone: true}"></textarea>
+        </div>
+      </div>
+      <div class="form-group pl-5">
+        <div class="form-check pl-5 ml-lg-3">
+          <button type="" class="btn btn-default bg-danger text-light w-25" (click)="saveData()">Submit</button>
+        </div>
+      </div>
+    </form>
+     <!-- <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="address">Address:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50" id="address" value="{{myprofile.address}}" [disabled]="disabled" [(ngModel)]="myprofile.address" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2 text-danger font-weight-bolder" for="dob">Date of Birth:</div>
+        <div class="col-sm-10">
+          <input type="text" class="form-control w-50" id="dob" value="{{myprofile.dob}}" [disabled]="disabled" [(ngModel)]="myprofile.dob" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>!-->

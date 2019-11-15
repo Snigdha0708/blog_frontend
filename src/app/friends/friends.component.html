@@ -1,0 +1,18 @@
+
+
+<!-- Card content -->
+<div class="card-body d-flex flex-row p-5" *ngFor="let a of friends">
+
+  <!-- Avatar -->
+  <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+  <!-- Content -->
+  <div>
+
+    <!-- Title -->
+    <div class="d-flex justify-content-center"><div class="mr-5 pr-5"><h4 class="card-title font-weight-bold mb-2">{{a.users1.name}}</h4></div>
+     <button class="btn btn-outline-danger" (click)="deleteFollower(a.users1.id)">Unfollow</button></div>
+
+  </div>
+</div>
+

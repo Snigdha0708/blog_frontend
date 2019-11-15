@@ -1,0 +1,89 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+
+      <li class="nav-item">
+        <marquee> <a class="nav-link disabled text-danger"><b>Blessings!!</b></a></marquee>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a class="nav-link text-danger" routerLink="/home">Home <span class="sr-only"></span></a>
+      <a class="nav-link text-danger" routerLink="/home" (click)="logout()">Logout <span class="sr-only"></span></a>
+    </form>
+  </div>
+</nav>
+
+
+<!-- Card -->
+<div class="row">
+<div class="card promoting-card  m-5 col-lg-6">
+
+  <!-- Card content -->
+  <div class="card-body d-flex flex-row p-5">
+
+    <!-- Avatar -->
+    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+    <!-- Content -->
+    <div>
+
+      <!-- Title -->
+      <div class="d-flex justify-content-center"><div class="mr-5 pr-5"><h4 class="card-title font-weight-bold mb-2">{{blogDetails.users.name}}</h4></div>
+        <div class="ml-5 pl-5" *ngIf="id1 !== d.id"><button class="btn btn-outline-danger" (click)="newFollower()">Follow</button></div>
+      <div *ngIf="id1 !== d.id"></div>
+      </div>
+      <!-- Subtitle -->
+      <p class="card-text"><i class="far fa-clock pr-2"></i>11/20/2019</p>
+
+    </div>
+
+  </div>
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top rounded-0" src="{{blogDetails.image}}" alt="Card image cap">
+    <a >
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body">
+
+    <div class="">
+
+      <!-- Text -->
+
+      <div><h4>{{blogDetails.about}}</h4></div>
+      <p >{{blogDetails.content}}</p>
+    </div>
+
+  </div>
+
+</div>
+<!-- Card -->
+
+
+<div class="card promoting-card  m-5 col-lg-3">
+  <h4>Comments</h4>
+  <div >
+    <textarea [(ngModel)]="comments" rows="5" cols="40"></textarea>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-danger" (click)="addCo(id)">Add</button>
+  </div>
+  <div *ngFor="let a of com">
+    <div *ngIf="a.blog.id === id" class="border border-dark p-5 m-2">
+      {{a.comments}}
+      <span class="pl-5 pt-5"><small>By:-{{a.users.name}}</small></span>
+    </div>
+  </div>
+</div>
+</div>

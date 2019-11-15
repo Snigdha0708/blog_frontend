@@ -1,0 +1,217 @@
+<head>
+  <style>
+    #u {
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+</head>
+<div class="a"><nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+      <li class="nav-item">
+       <marquee> <a class="nav-link text-danger" href="#">Blessings!!</a></marquee>
+      </li>
+     <li>
+       <form class="form-inline my-2 my-lg-0">
+         <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="see" (keypress)="seename()">
+         <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="seename()">Search</button>
+       </form>
+     </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a class="nav-link text-danger" routerLink="/profile">My Profile<span class="sr-only"></span></a>
+      <a class="nav-link text-danger" routerLink="/friends">Friends<span class="sr-only"></span></a>
+        <a class="nav-link text-danger" routerLink="/create">Add New Blog<span class="sr-only"></span></a>
+      <a class="nav-link text-danger" (click)="logout()" routerLink="">Logout<span class="sr-only"></span></a>
+    </form>
+
+  </div>
+</nav>
+</div>
+<div class="container">
+  <div class="carousel">
+    <input type="radio" id="carousel-1" name="carousel[]" checked>
+    <input type="radio" id="carousel-2" name="carousel[]">
+    <input type="radio" id="carousel-3" name="carousel[]">
+    <input type="radio" id="carousel-4" name="carousel[]">
+    <input type="radio" id="carousel-5" name="carousel[]">
+    <ul class="carousel__items">
+      <li class="carousel__item"><img src="https://www.blog2print.com/wp-content/uploads/2016/03/b2p-quote-coben.jpg" alt=""></li>
+      <li class="carousel__item"><img src="https://www.geelongmedicalgroup.com.au/wp-content/uploads/2018/05/healthy-feast.jpg" alt=""></li>
+      <li class="carousel__item"><img src="https://colorlib.com/wp/wp-content/uploads/sites/2/petsworld-animal-shelter-wordpress-theme.jpg" alt=""></li>
+      <li class="carousel__item"><img src="https://www.verbalplanet.com/Images/blog-language.jpg" alt=""></li>
+      <li class="carousel__item"><img src="http://blog.graphiquedefrance.com/wp-content/uploads/2018/01/Style-ladies-1.jpg" alt=""></li>
+    </ul>
+    <div class="carousel__prev">
+      <label for="carousel-1"></label>
+      <label for="carousel-2"></label>
+      <label for="carousel-3"></label>
+      <label for="carousel-4"></label>
+      <label for="carousel-5"></label>
+    </div>
+    <div class="carousel__next">
+      <label for="carousel-1"></label>
+      <label for="carousel-2"></label>
+      <label for="carousel-3"></label>
+      <label for="carousel-4"></label>
+      <label for="carousel-5"></label>
+    </div>
+    <div class="carousel__nav">
+      <label for="carousel-1"></label>
+      <label for="carousel-2"></label>
+      <label for="carousel-3"></label>
+      <label for="carousel-4"></label>
+      <label for="carousel-5"></label>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row mt-40">
+    <div class="col-md-4 col-sm-6">
+      <div class="box1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm8k0OGyiC141uYxbpbFubgA6dG9TNNYlRZOVZ_riKZOa_FRKcHQ&s" alt="">
+        <h3 class="title">Language</h3>
+        <ul class="icon">
+          <li><a href="#"><i class="fa fa-search"></i></a></li>
+          <li><a href="#"><i class="fa fa-link"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="box1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPTZqTrddXNh_Jf_ofk8UBe7kqGJXjTbyaZk-g8SIK8eR8wk_h&s" alt="" class="img-thumbn">
+        <h3 class="title">Food</h3>
+        <ul class="icon">
+          <li><a href="#"><i class="fa fa-search"></i></a></li>
+          <li><a href="#"><i class="fa fa-link"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="box1">
+        <img src="https://i2.wp.com/ideacoration.co/wp-content/uploads/2018/02/Blogger-Closets-29.jpg?zoom=2.625&w=399&h=266&ssl=1" alt="">
+        <h3 class="title">Fashion</h3>
+        <ul class="icon">
+          <li><a href="#"><i class="fa fa-search"></i></a></li>
+          <li><a href="#"><i class="fa fa-link"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4><b>Let's discuss some hot Blogging topics!!!</b></h4>
+<div *ngIf="follower2.length !=0">
+<div class="content-slider">
+  <div class="slider">
+    <div class="mask">
+      <ul>
+        <li class="anim1">
+          <div class="quote">First impressions matter, and our opening few lines can either energize the interaction, or cause the other person to look around for the nearest exit.</div>
+          <div class="source">- Pyschology Today</div>
+        </li>
+        <li class="anim2">
+          <div class="quote">I love making this drink for parties, especially in the fall and winter. It's so aromatic, it makes our house smell inviting and cozy, and everyone always asks for the recipe. </div>
+          <div class="source">- Fresh Foodie thoughts</div>
+        </li>
+        <li class="anim3">
+          <div class="quote">It takes nothing away from us to be kind to an animal.</div>
+          <div class="source">- If i was an animal</div>
+        </li>
+        <li class="anim4">
+          <div class="quote">With languages you are home,anywhere.</div>
+          <div class="source">- Hyderabad to Rajpura things</div>
+        </li>
+        <li class="anim5">
+          <div class="quote"> In the world full of trend, I just need a pajama.</div>
+          <div class="source">- Winters are in</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="table-danger text-center"><b>INSPIRATIONAL BLOGS!!!</b></div>
+  <div class="row mt-40">
+    <div class="col-md-4 col-sm-6 mb-4" *ngFor="let a of blogs;let c =index;let d =index;">
+      <div class="box1 " *ngIf="access1[c].number === 1 || follower2[d].number === 1">
+        <img src="{{a.image}}" alt="" >
+        <h3 class="title"  routerLink="/profile">{{a.about}}</h3>
+        <ul class="icon">
+          <li><a (click)="onSelect(a)"><i class="fa fa-search"></i></a></li>
+          <li><a (click)="onSelect(a)"><i class="fa fa-link"></i></a></li>
+        </ul>
+        <div class="d-flex">
+      <div  class="ml-5 py-3 text-danger"><span class="px-2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnuRSeeyPve7KwDvJJ6OBzj3gyghwLcE2z9kZeYBOyZavh3mw&s" class="rounded-circle" height="10px" width="10px" id="u"></span><b>{{a.users.name}}</b></div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<div *ngIf="follower2.length === 0">
+  <div class="content-slider">
+    <div class="slider">
+      <div class="mask">
+        <ul>
+          <li class="anim1">
+            <div class="quote">First impressions matter, and our opening few lines can either energize the interaction, or cause the other person to look around for the nearest exit.</div>
+            <div class="source">- Pyschology Today</div>
+          </li>
+          <li class="anim2">
+            <div class="quote">I love making this drink for parties, especially in the fall and winter. It's so aromatic, it makes our house smell inviting and cozy, and everyone always asks for the recipe. </div>
+            <div class="source">- Fresh Foodie thoughts</div>
+          </li>
+          <li class="anim3">
+            <div class="quote">It takes nothing away from us to be kind to an animal.</div>
+            <div class="source">- If i was an animal</div>
+          </li>
+          <li class="anim4">
+            <div class="quote">With languages you are home,anywhere.</div>
+            <div class="source">- Hyderabad to Rajpura things</div>
+          </li>
+          <li class="anim5">
+            <div class="quote"> In the world full of trend, I just need a pajama.</div>
+            <div class="source">- Winters are in</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="table-danger text-center"><b>INSPIRATIONAL BLOGS!!!</b></div>
+    <div class="row mt-40">
+      <div class="col-md-4 col-sm-6 mb-4" *ngFor="let a of blogs;let c =index;let d =index;">
+        <div class="box1 " *ngIf="a.access === 'public'">
+          <img src="{{a.image}}" alt="" >
+          <h3 class="title"  routerLink="/profile">{{a.about}}</h3>
+          <ul class="icon">
+            <li><a (click)="onSelect(a)"><i class="fa fa-search"></i></a></li>
+            <li><a (click)="onSelect(a)"><i class="fa fa-link"></i></a></li>
+          </ul>
+          <div class="d-flex">
+            <div  class="ml-5 py-3 text-danger"><span class="px-2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnuRSeeyPve7KwDvJJ6OBzj3gyghwLcE2z9kZeYBOyZavh3mw&s" class="rounded-circle" height="10px" width="10px" id="u"></span><b>{{a.users.name}}</b></div>
+          </div>
+        </div>
+        <div class="box1 " *ngIf="a.access === 'private'">
+          <img src="{{a.image}}" alt="" >
+          <h3 class="title">Private</h3>
+          <ul class="icon">
+            <li><a (click)="onSelect(a)"><i class="fa fa-search"></i></a></li>
+            <li><a (click)="onSelect(a)"><i class="fa fa-link"></i></a></li>
+          </ul>
+          <div class="d-flex">
+            <div  class="ml-5 py-3 text-danger"><span class="px-2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnuRSeeyPve7KwDvJJ6OBzj3gyghwLcE2z9kZeYBOyZavh3mw&s" class="rounded-circle" height="10px" width="10px" id="u"></span><b>{{a.users.name}}</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
