@@ -65,7 +65,7 @@ export class CompleteBlogComponent implements OnInit {
     }
     alert('Thanku for adding comment');
       return this.abc.addComment(a, this.b).subscribe(data10 => {
-         this.router.navigate(['home']);
+        this.router.navigate(['/home' , this.id]);
        });
 
      }}

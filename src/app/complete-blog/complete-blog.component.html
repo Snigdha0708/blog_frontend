@@ -74,7 +74,7 @@
 <div class="card promoting-card  m-5 col-lg-3">
   <h4>Comments</h4>
   <div >
-    <textarea [(ngModel)]="comments" rows="5" cols="40"></textarea>
+    <input type="text" class="form-control w-50" id="email"  [(ngModel)]="comments" [ngModelOptions]="{standalone: true}" >
   </div>
   <div class="text-center">
     <button class="btn btn-danger" (click)="addCo(id)">Add</button>
